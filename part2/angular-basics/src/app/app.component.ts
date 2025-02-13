@@ -11,4 +11,5 @@ import { WeatherDataComponent } from './weather-data/weather-data.component';
 export class AppComponent {
   title = 'Fundamentals of Angular.js (nonstop, 3 ects)';
   myname = 'Anna';
+  weather = "The sky is clear and the temperature is +20 degrees Celsius"
 }
