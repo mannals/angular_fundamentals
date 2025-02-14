@@ -1,0 +1,5 @@
+<div>
+    <button [style.backgroundColor]="color" (click)="changeColor()">Click me</button>
+    <p>{{ clicked }}</p>
+    <input (input)="onInputChange($event)" type="text" [(ngModel)]="clicked" />
+</div>
