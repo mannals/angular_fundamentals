@@ -1,0 +1,19 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <p>Dividend: {{ dividend }}</p>
+        <div class="form-group">
+            <label for="divisor">Divide with:</label>
+            <select formControlName="divisor" class="form-control">
+                <option disabled>Select divisor</option>
+                <option>Choose divisor</option>
+                <option *ngFor="let num of divisorList" [value]="num">{{ num }}</option>
+            </select> 
+            <div *ngIf="f.divisor.touched && f.divisor.invalid" class="alert alert-danger">
+                <div *ngIf="f.divisor.errors && f.divisor.errors['required']">Divisor is required.</div>
+            </div>
+        </div>
+    
+        <button type="submit" [disabled]="!form.valid">Divide number!</button>
+        <p>{{ divisionString }}</p>
+    </form>
+</div>

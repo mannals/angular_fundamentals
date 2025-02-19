@@ -1,0 +1,8 @@
+<div id="button-container">
+    <button (click)="generateNumber($event)">Generate!</button>
+    <input (input)="onInputChange($event)" type="text" />
+    <p>{{ resultString }}</p>
+</div>
+<div>
+    <app-division [hidden]="!generated" [dividend]="result"></app-division>
+</div>
