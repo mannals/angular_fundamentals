@@ -1,0 +1,7 @@
+<div>
+    <h2>String Transform Pipe</h2>
+    <input type="text" name="input" [(ngModel)]="inputString" required>
+    <button (click)="showFormattedString()">Submit</button>
+    <p *ngIf="showTransformed">{{ inputString }}</p>
+    <p *ngIf="showTransformed">{{ inputString | transform }}</p>
+</div>
