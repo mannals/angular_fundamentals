@@ -1,0 +1,13 @@
+<div id="ngswitch-container">
+    <div ng-model="buttons" class="buttons">
+        <button (click)="switchPage(name)">Name</button>
+        <button (click)="switchPage(age)">Age</button>
+        <button (click)="switchPage(job)">Job</button>
+    </div>
+    <div [ngSwitch]="selection">
+        <p *ngSwitchCase="name">I am {{ name }}.</p>
+        <p *ngSwitchCase="age">I am {{ age }} years old.</p>
+        <p *ngSwitchCase="job">I am a {{ job }}.</p>
+        <p *ngSwitchDefault>Click a button!</p>
+    </div>
+</div>
