@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Hover the button!</h1>
+  <p>This is an simple example of using a custom structural directive.</p>
+  <dialog #popupDialog>
+    <button autofocus (click)="popupDialog.close()">Close</button>
+    <p>SURPRISE!!!!</p>
+  </dialog>
+  <button appChangeBg (click)="popupDialog.show()">I am a button!</button>
+</div>
