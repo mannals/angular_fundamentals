@@ -1,0 +1,18 @@
+<div class="content" [ngStyle]="{backgroundImage:'url(./img/museum.png)'}">
+  <div id="name-image">
+    <h1 id="name">
+      {{title}}
+    </h1>
+    <div id="navigator-links">
+      <div class="links">
+        <a class="nav-link" routerLink="about-me">About Me</a>
+        <a class="nav-link" routerLink="skills">Skills</a>
+        <a class="nav-link" routerLink="experience">Experience</a>
+      </div>
+    </div>
+    <img id="me" width="400" alt="Blathers Picture" src="/img/Blathers-transparent.png">
+  </div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
