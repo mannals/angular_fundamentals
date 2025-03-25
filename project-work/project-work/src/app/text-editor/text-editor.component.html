@@ -1,1 +1,27 @@
-<p>text-editor works!</p>
+<div>
+    <div id="input-box"> 
+        <form (ngSubmit)="onSubmit()">
+            <input type="text" id="text-input" placeholder="Write something..." [(ngModel)]="inputString" [ngModelOptions]="{standalone: true}" />
+            <div class="text-option">
+                <input type="checkbox" id="bold-text" name="bold-text" [(ngModel)]="isBold" [ngModelOptions]="{standalone: true}" value="Bold">
+                <label for="bold-text"><b>Bolded</b></label>
+            </div>
+            <div class="text-option">
+                <input type="checkbox" id="italic-text" name="italic-text" [(ngModel)]="isItalic" [ngModelOptions]="{standalone: true}" value="Italic">
+                <label for="italic-text"><i>Italic</i></label>
+            </div>
+            <div class="text-option">
+                <select [(ngModel)]="color" [ngModelOptions]="{standalone: true}">
+                    <option selected="" value="">Choose color...</option>
+                    <option [ngValue]="c" *ngFor="let c of colors">{{ c }}</option>
+                </select>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div *ngIf="submitted" id="text-box">
+        <p id="modified-text" *ngIf="submitted" [appTextFormat]="{isBold: isBold, isItalic: isItalic, color: color}">{{ inputString }}</p>
+    </div>
+
+</div>

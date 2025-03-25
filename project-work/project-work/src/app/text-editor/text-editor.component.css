@@ -1,0 +1,23 @@
+#input-box {
+    background-color: darkslategrey;
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#text-box {
+    background-color: whitesmoke;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    color: honeydew;
+}

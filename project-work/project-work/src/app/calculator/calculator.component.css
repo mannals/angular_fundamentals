@@ -1,0 +1,46 @@
+.calculator {
+    background-color: darkslategrey;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    width: 100%;
+}
+
+td {
+    padding: 5px;
+    width: 60px;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    font-size: larger;
+    color: antiquewhite;
+    background-color: rgb(20, 29, 29);
+    border: none;
+    border-radius: 5px;
+}
+
+#display {
+    width: 80%;
+    margin: 10px auto;
+    text-align: right;
+    padding: 10px;
+    font-size: larger;
+    color: rgb(144, 211, 200);
+    background-color: rgb(20, 29, 29);
+    border: none;
+    border-radius: 5px;
+}
+
+.num-button, .operator-button {
+    cursor: pointer;
+}

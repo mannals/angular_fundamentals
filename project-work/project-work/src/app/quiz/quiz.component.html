@@ -1,1 +1,24 @@
-<p>quiz works!</p>
+<div class="quiz-container">
+    <form [formGroup]="questionForm" (ngSubmit)="onSubmit($event)">
+      <div formArrayName="questions" *ngFor="let question of questions.controls; let i = index">
+        <div [formGroupName]="i">
+          <h3>{{ question.value.questionText }}</h3>
+          <div *ngFor="let option of getOptions(question).controls; let j = index">
+            <label>
+              <input type="radio" [formControlName]="'answer'" [value]="option.value">{{ option.value }}
+            </label>
+          </div>
+          <div *ngIf="submitted">
+            <p *ngIf="question.value.isCorrect; else incorrect" style="color:green;">Correct!</p>
+            <ng-template #incorrect>
+              <p style="color:red">Incorrect! Correct answer is {{ question.value.correctAnswer }}</p>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+      
+      <button type="submit" [disabled]="!questionForm.valid">Submit</button>
+    </form>
+    <p *ngIf="submitted">{{ score }} / 3</p>
+    <button *ngIf="submitted" type="button" (click)="resetQuiz()">Reset</button>
+</div>

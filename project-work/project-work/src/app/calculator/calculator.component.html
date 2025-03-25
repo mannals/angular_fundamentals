@@ -1,1 +1,69 @@
-<p>calculator works!</p>
+<div class="calculator">
+    <form (ngSubmit)="onSubmit($event)">
+        <table>
+            <tr>
+                <td colspan="3"><p id="display" name="display">{{ calculation }}</p></td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <input type="button" class="num-button" value="7" (click)="appendNumber(7)" />
+                </td>
+                <td colspan="1">
+                    <input type="button" class="num-button" value="8" (click)="appendNumber(8)" />
+                </td>
+                <td colspan="1">
+                    <input type="button" class="num-button" value="9" (click)="appendNumber(9)" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <input type="button" class="num-button" value="4" (click)="appendNumber(4)" />
+                </td>
+                <td colspan="1">
+                    <input type="button" class="num-button" value="5" (click)="appendNumber(5)" />
+                </td>
+                <td colspan="1">
+                    <input type="button" class="num-button" value="6" (click)="appendNumber(6)" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <input type="button" class="num-button" value="1" (click)="appendNumber(1)" />
+                </td>
+                <td colspan="1">
+                    <input type="button" class="num-button" value="2" (click)="appendNumber(2)" />
+                </td>
+                <td colspan="1">
+                    <input type="button" class="num-button" value="3" (click)="appendNumber(3)" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <input type="button" class="operator-button" value="+" (click)="appendOperation('+')" />
+                </td>
+                <td colspan="1">
+                    <input type="button" class="num-button" value="0" (click)="appendNumber(0)" />
+                </td>
+                <td colspan="1">
+                    <input type="button" class="operator-button" value="–" (click)="appendOperation('-')" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <input type="button" class="operator-button" value="*" (click)="appendOperation('*')" />
+                </td>
+                <td colspan="1">
+                    <input type="button" class="operator-button" value="=" (click)="calculate()" />
+                </td>
+                <td colspan="1">
+                    <input type="button" class="operator-button" value="/" (click)="appendOperation('/')" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="button" class="operator-button" value="Reset" (click)="reset()" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
